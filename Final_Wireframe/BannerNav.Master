@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BannerNav.master.cs" Inherits="Final_Wireframe.BannerNav" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<title></title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>
+	<link rel="stylesheet" href="StyleSheet1.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<script type="text/javascript" src="JavaScript.js"></script>
+</head>
+<body>
+	<header>
+		<div class="corner_icon">
+			<img src="assets/uws-logo.png" />
+		</div>
+		<div class="main_bar"></div>
+		<div class="user_logout">
+			<button>
+				<svg viewBox="0 0 32 32" >
+					<path fill="#fff" d="M5,28h2c0-5,4-9,9-9s9,4,9,9h2c0-4.6-2.8-8.5-6.8-10.2c2.3-1.4,3.8-3.9,3.8-6.8c0-4.4-3.6-8-8-8s-8,3.6-8,8
+	c0,2.9,1.5,5.4,3.8,6.8C7.8,19.5,5,23.4,5,28z M10,11c0-3.3,2.7-6,6-6s6,2.7,6,6s-2.7,6-6,6S10,14.3,10,11z"/>
+				</svg>
+			</button>
+		</div>
+	</header>
+	<div class="below_header_wrapper">
+		<div class="sidebar_bkg">
+			<ul class="sidebar">
+				<li class="sidebar_item" id="Login" runat="server" PostBackUrl="/Index.aspx">Login</li>
+				<li class="sidebar_item" id="Courses" runat="server" PostBackUrl="/Courses.aspx">Available Courses</li>
+				<li class="sidebar_item" id="Register">Register</li>
+				<li class="sidebar_item" id="MyClasses">My Classes</li>
+			</ul>
+		</div>
+		<div class="content">
+			<asp:ContentPlaceHolder ID="content" runat="server" />
+		</div>
+	</div>
+	
+	
+	   
+</body>
+</html>
